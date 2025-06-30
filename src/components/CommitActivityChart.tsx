@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { CommitActivity } from "@/types/github";
+import { useMemo } from "react";
 
 interface CommitActivityChartProps {
   data?: CommitActivity;
@@ -17,13 +18,24 @@ interface CommitActivityChartProps {
 export default function CommitActivityChart({
   data,
 }: CommitActivityChartProps) {
-  // Преобразуем данные для графика
-  const chartData =
-    data?.target.history.edges.map((edge, index) => ({
-      week: index,
-      commits: 1, // Здесь нужно добавить реальную логику подсчета коммитов
-      date: new Date(edge.node.committedDate).toLocaleDateString(),
-    })) || [];
+  const chartData = useMemo(() => {
+    if (!data) return [];
+
+    const commits = data.target.history.edges;
+
+    const grouped = commits.reduce<Record<string, number>>((acc, edge) => {
+      const date = new Date(edge.node.committedDate).toLocaleDateString(
+        "ru-RU"
+      );
+      acc[date] = (acc[date] || 0) + 1;
+      return acc;
+    }, {});
+
+    return Object.entries(grouped).map(([date, commits]) => ({
+      date,
+      commits,
+    }));
+  }, [data]);
 
   return (
     <div className="h-64">
@@ -31,10 +43,10 @@ export default function CommitActivityChart({
         <LineChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
-          <YAxis />
+          <YAxis allowDecimals={false} />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="commits" stroke="#8884d8" />
+          <Line type="monotone" dataKey="commits" stroke="#4ade80" />
         </LineChart>
       </ResponsiveContainer>
     </div>

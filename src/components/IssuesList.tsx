@@ -34,14 +34,22 @@ export default function IssuesList({ issues = [] }: IssuesListProps) {
       </div>
 
       <ul className="space-y-2">
-        {filteredIssues.map((issue) => (
-          <li key={issue.id} className="border p-3 rounded">
-            <h3 className="font-medium">{issue.title}</h3>
-            <p className="text-sm text-gray-600">
-              #{issue.number} opened by {issue.author.login}
-            </p>
-          </li>
-        ))}
+        {filteredIssues.length === 0 ? (
+          <p className="text-gray-400 italic">
+            No {filter.toLowerCase()} issues found.
+          </p>
+        ) : (
+          <ul className="space-y-2">
+            {filteredIssues.map((issue) => (
+              <li key={issue.id} className="border p-3 rounded">
+                <h3 className="font-medium">{issue.title}</h3>
+                <p className="text-sm text-gray-600">
+                  #{issue.number} opened by {issue.author.login}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )}
       </ul>
     </div>
   );
