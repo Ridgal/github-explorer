@@ -1,51 +1,50 @@
-GitHub Repository Explorer
-Описание проекта
-GitHub Repository Explorer - это веб-приложение, построенное на Next.js, которое позволяет:
+# 🚀 GitHub Repository Explorer
 
-Искать репозитории GitHub по имени пользователя
+[![Next.js](https://img.shields.io/badge/Next.js-14.0+-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![GitHub API](https://img.shields.io/badge/GitHub_API-v4-181717?logo=github)](https://docs.github.com/en/graphql)
 
-Просматривать ключевую статистику репозиториев (звёзды, форки, последнее обновление)
+Визуальный инструмент для анализа репозиториев GitHub с красивыми графиками и удобной статистикой.
 
-Анализировать активность коммитов через интерактивные графики
+![Preview](https://i.imgur.com/your-screenshot.png) <!-- Замените на реальный скриншот -->
 
-Просматривать и фильтровать issues репозиториев
+## ✨ Возможности
 
-Технологический стек
-Next.js (App Router)
+- 🔍 Поиск репозиториев по имени пользователя
+- 📊 Интерактивные графики активности коммитов
+- ⭐ Просмотр статистики (звезды, форки, последние обновления)
+- 🏷️ Фильтрация issues по статусу (Open/Closed)
+- 💾 Локальное сохранение истории поиска
 
-TypeScript
+## 🛠 Технологии
 
-React Query (для работы с GitHub API)
+<table>
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="Next.js" />
+      <br>Next.js
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
+      <br>TypeScript
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind CSS" />
+      <br>Tailwind
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
+      <br>React
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=graphql" width="48" height="48" alt="GraphQL" />
+      <br>GraphQL
+    </td>
+  </tr>
+</table>
 
-Tailwind CSS + CSS Modules (стилизация)
+## 🚀 Быстрый старт
 
-Recharts (визуализация данных)
-
-GitHub GraphQL API
-
-Установка и запуск
-Клонируйте репозиторий:
-
-bash
-git clone https://github.com/ваш-username/github-repo-explorer.git
-Установите зависимости:
-
-bash
-npm install
-# или
-yarn install
-# или
-pnpm install
-Создайте файл .env.local и добавьте ваш GitHub токен:
-
-env
-NEXT_PUBLIC_GITHUB_TOKEN=ваш_github_token_здесь
-Запустите development сервер:
-
-bash
-npm run dev
-# или
-yarn dev
-# или
-pnpm dev
-Приложение будет доступно по адресу http://localhost:3000
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/your-username/github-repo-explorer.git
