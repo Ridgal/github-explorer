@@ -14,6 +14,10 @@ export interface UserRepositoriesResponse {
   user: {
     repositories: {
       nodes: Repository[];
+      pageInfo: {
+        endCursor: string | null;
+        hasNextPage: boolean;
+      };
     };
   } | null;
 }

@@ -15,6 +15,10 @@ export const SEARCH_REPOS_QUERY = gql`
             login
           }
         }
+        pageInfo {
+          endCursor
+          hasNextPage
+        }
       }
     }
   }
