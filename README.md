@@ -6,7 +6,7 @@
 
 Визуальный инструмент для анализа репозиториев GitHub.
 
-Link: [github-explorer-tau-five.vercel.app](https://github-explorer-tau-five.vercel.app/)
+![]([https://cloudinary.com/logo.png](https://github.com/Ridgal/github-explorer/blob/master/src/assets/screenshots/screenshot1.PNG)) ![]([https://cloudinary.com/logo.png](https://github.com/Ridgal/github-explorer/blob/master/src/assets/screenshots/screenshot2.PNG))
 
 ## ✨ Возможности
 
