@@ -24,9 +24,9 @@ export default function CommitActivityChart({
     const commits = data.target.history.edges;
 
     const grouped = commits.reduce<Record<string, number>>((acc, edge) => {
-      const date = new Date(edge.node.committedDate).toLocaleDateString(
-        "ru-RU"
-      );
+      const date = new Date(edge.node.committedDate)
+        .toISOString()
+        .split("T")[0];
       acc[date] = (acc[date] || 0) + 1;
       return acc;
     }, {});

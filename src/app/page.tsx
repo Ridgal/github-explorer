@@ -26,7 +26,14 @@ export default function Home() {
 
   useEffect(() => {
     if (data?.user?.repositories?.nodes) {
-      setStoredRepos(data.user.repositories.nodes);
+      setStoredRepos(
+        data.user.repositories.nodes.map((repo) => ({
+          ...repo,
+          formattedUpdatedAt: repo.updatedAt
+            ? repo.updatedAt.split("T")[0]
+            : "неизвестно",
+        }))
+      );
     }
   }, [data, setStoredRepos]);
 

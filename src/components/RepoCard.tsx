@@ -29,7 +29,7 @@ export default function RepoCard({ repo }: RepoCardProps) {
             🍴 <span>{repo.forkCount}</span>
           </span>
           <span className="ml-auto">
-            Обновлено: {new Date(repo.updatedAt).toLocaleDateString()}
+            Обновлено: {new Date(repo.updatedAt).toISOString().split("T")[0]}
           </span>
         </div>
       </article>
