@@ -6,8 +6,8 @@
 
 Визуальный инструмент для анализа репозиториев GitHub.
 
-![screen](https://cloudinary.com/logo.png](https://github.com/Ridgal/github-explorer/blob/master/src/assets/screenshots/screenshot1.PNG)
-![screen](https://cloudinary.com/logo.png](https://github.com/Ridgal/github-explorer/blob/master/src/assets/screenshots/screenshot2.PNG)
+![screen](https://github.com/Ridgal/github-explorer/blob/master/src/assets/screenshots/screenshot1.PNG)
+![screen](https://github.com/Ridgal/github-explorer/blob/master/src/assets/screenshots/screenshot2.PNG)
 
 ## ✨ Возможности
 
